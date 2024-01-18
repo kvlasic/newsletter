@@ -1,52 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
 
-  <!-- Sign-up form start -->
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      * {
+        font-family: "Roboto", sans-serif;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        margin: 0;
+        background-color: #36384d;
+        display: flex;
+        flex-direction: column;
+        color: #232742;
+      }
+      h1 {
+        font-size: 45px;
+        margin: 36px 0px 20px 0px;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0px 30px 0px;
+      }
+      ul li {
+        padding: 5px;
+        padding-left: 36px;
+      }
+      ul li::before {
+        content: "";
+        position: absolute;
+        width: 21px;
+        height: 21px;
+        margin-left: -36px;
+        background: url("assets/images/icon-list.svg") no-repeat;
+      }
+      label {
+        width: 100%;
+        font-weight: bold;
+        font-size: 10px;
+        display: block;
+        margin: 3px 0px 7px 0px;
+      }
+      input {
+        border-width: 1px;
+        color: rgb(219, 219, 219);
+        border-color: rgb(219, 219, 219);
+        border-radius: 7px;
+        height: 45px;
+        width: 100%;
+        padding-left: 20px;
+      }
+      button {
+        margin: 18px 0px;
+        height: 46px;
+        border-radius: 7px;
+        font-weight: bold;
+        width: 100%;
+        background-color: #232742;
+        color: white;
+      }
+      .container {
+        display: flex;
+        justify-content: space-between;
+        width: 744px;
+        height: 510px;
+        margin: auto;
+        background-color: white;
+        border-radius: 35px;
+      }
+      .left {
+        display: flex;
+        flex-direction: column;
+        margin: 40px 40px 0px 40px;
+        font-size: small;
+      }
+      .right {
+        display: flex;
+        margin: 25px 25px 25px 0px;
+        max-height: fit-content;
+      }
+      .attribution {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+      }
+      p {
+        margin: 0;
+      }
+      p.confirm {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sign-up form start -->
+    <div class="container">
+      <div class="left">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        <form>
+          <label for="email">Email address</label>
+          <input type="email" id="email" placeholder="email@company.com" />
+          <button>Subscribe to monthly newsletter</button>
+        </form>
+        <!-- Sign-up form end -->
 
-  Stay updated!
+        <!-- Success message start -->
 
-  Join 60,000+ product managers receiving monthly updates on:
+        <p class="confirm">
+          Thanks for subscribing! A confirmation email has been sent to
+          ash@loremcompany.com. Please open it and click the button inside to
+          confirm your subscription. Dismiss message
+        </p>
 
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <!-- Success message end -->
+      </div>
+      <div class="right">
+        <img
+          src="/assets/images/illustration-sign-up-desktop.svg"
+          height="460px"
+        />
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/kvlasic/">Kristijan Vlasic</a>.
+    </div>
+  </body>
 </html>
